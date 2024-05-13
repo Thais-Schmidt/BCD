@@ -1,0 +1,61 @@
+select order by -> ordem de data (pesquisa)
+
+
+
+Normalização de dados (1) - G. Pantalhão
+
+Organização das tabelas do excel (2) - Vinicius, Bruno
+
+Criação do banco de dados (2) - Thaís, 
+
+
+
+---------------
+
+create database loja;
+
+use Loja;
+
+create table tbl_clientes(
+	id int not null auto_increment,
+	nome varchar (45) not null,
+	sobrenome varchar (45) not null,
+	cpf varchar(15) not null,
+	primary key(id)
+);
+
+select * from tbl_clientes; 
+
+insert into tbl_clientes(nome, sobrenome, cpf)
+values('Paula', 'Custódio Mattos', '199.535.473-27');
+
+use Loja;
+
+create table if not exists tbl_telefones (
+	id int not null auto_increment,
+	id_cliente int not null,
+    telefone varchar(11) not null,
+	primary key(id),
+    foreign key (id_cliente) references tbl_clientes(id)
+);
+
+TAMBEM NAO ADICIONEI OS TELEFONES
+
+select * from tbl_telefones; 
+
+insert into tbl_telefones(id_cliente, telefone)
+values('', '');
+
+NAO FIZ A TABELA DOS ENTREGADORES
+
+use Loja;
+
+create table if not exists tbl_entregadores (
+	id int not null auto_increment,
+	nome varchar (45) not null,
+	sobrenome varchar (45) not null,
+    veiculo varchar (45) not null,
+	primary key(id)
+);
+
+

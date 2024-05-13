@@ -1,0 +1,11 @@
+CRUD
+
+Create   (criar)
+Read     (ler)
+Update   (atualizar)
+Delete   (apagar)
+
+http://www.sis4.com/brModelo/download.html
+
+
+
